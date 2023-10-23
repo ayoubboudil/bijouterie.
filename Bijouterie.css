@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&family=Playfair:ital,wght@0,900;1,300;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+}
+section {
+    margin-top: 50px;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62%;
+}
+body{
+    position: relative;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: beige;
+    box-shadow: 0 0 10px ;
+    z-index: 10;
+}
+.menu { 
+    display: flex;
+}
+.logo {
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+.logo span{
+    color: brown;
+}
+.menu li{
+    margin: 0 15px;
+    list-style: none;
+}
+.menu li a{
+    font-size: 18px;
+    text-decoration: 0;
+    color: black;
+    position: relative;
+}
+.menu li a::before{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: black;
+    transition: 0.5s;
+}
+.menu li a:hover::before{
+    width: 100%;
+}
+.menu li a::after{
+    position: absolute;
+    top: -5px;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: black;
+    transition: 0.5s;
+}
+.menu li a:hover::after{
+    width: 100%;
+}
+.menu li a:hover{
+    color: black;
+}
+
+/*home css*/
+#home{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: calc(100vh - 50px);
+    justify-content: space-between;
+}
+#home .left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#home .left h4{
+    font-size: 30px;
+    color: brown;
+}
+#home .left h1{
+    font-size: 30px;
+}
+#home .left p {
+    font-size: 12px;
+    color: aquamarine;
+}
+#home .left button{
+    margin-top: 20px;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: beige;
+    border: 0;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+#home .left button a {
+    text-decoration: 0;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+#home .left button::before{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: beige;
+}
+#home .left button:hover a{
+    letter-spacing: 1px;
+}
+
+#home .right{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .right img{
+    width: 100%;
+    animation: animate 2s linear;
+    transition: 2s;
+}
+
+/* animation image */
+
+@keyframes animate {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* apropos CSS */
+
+#apropos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 10px;
+    background-color: rgb(249, 247, 246);
+    text-;
+}
+.mini_title {
+    margin-top: 25px;
+    font-size: 30px;
+    color: black;
+    text-transform: capitalize;
+}
+
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+}
+.dishes .dish{
+    height: 280px;
+    width: 30%;
+    background-color: rgb(220, 199, 171);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    margin-bottom: 35px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px black;
+}
+.dishes .dish img {
+    width: 130px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+.dishes .dish p {
+    text-align: center;
+    font-size: 18px;
+}
+.dishes .dish a {
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: 0;
+    background-color: brown;
+    padding: 5px 60px;
+    color: blanchedalmond;
+    border-radius: 6px;
+}
+
+/*Scrollbar CSS*/
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
+/* section commander */
+
+#commander{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#commander form{
+    display: flex;
+    background-color: burlywood;
+    padding: 25px;
+    border-radius: 6px;
+    flex-direction: column;
+    width: 350px;
+}
+#commander form label {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+#commander form input{
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+}
+#commander form input:focus{
+    outline: 1px solid rgb(125, 229, 125);
+}
+#commander form input[type="commander"]{
+    margin-top: 15px;
+    color: #ccc;
+    background-color: antiquewhite;
+    border: 1px solid antiquewhite;
+}
+/* footer CSS */
+footer {
+    background-color: rgb(223, 218, 218);
+}
+footer .services_list{
+    padding: 10px -10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service img {
+    width: 40px;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.service{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px auto;
+}
+.service p {
+    color: #333;
+}
+hr{
+    background-color: #ccc;
+    border: 0;
+    height: 2px;
+    width: 100%;
+}
+.footer_text{
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 0;
+}
+.footer_text span {
+    color: sienna;
+}
+
+/* Responsive */
+@media (max-width:964px){
+    header .menu{
+        display: none;
+    }
+    header{
+        padding: 0 20px;
+    }
+    #home{
+        flex-direction: column;
+        padding: 12px;
+        height: fit-content;
+    }
+    #home .left , #home .right{
+        width: 100%;
+        padding: 0;
+    }
+    #home .left {
+        margin: 100px 0;
+    }
+    #home .left h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    #home .left h4{
+        font-size: 15px;
+    }
+    #home .left p{
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&family=Playfair:ital,wght@0,900;1,300;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+}
+section {
+    margin-top: 50px;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62%;
+}
+body{
+    position: relative;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: beige;
+    box-shadow: 0 0 10px ;
+    z-index: 10;
+}
+.menu { 
+    display: flex;
+}
+.logo {
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+.logo span{
+    color: brown;
+}
+.menu li{
+    margin: 0 15px;
+    list-style: none;
+}
+.menu li a{
+    font-size: 18px;
+    text-decoration: 0;
+    color: black;
+    position: relative;
+}
+.menu li a::before{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: black;
+    transition: 0.5s;
+}
+.menu li a:hover::before{
+    width: 100%;
+}
+.menu li a::after{
+    position: absolute;
+    top: -5px;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: black;
+    transition: 0.5s;
+}
+.menu li a:hover::after{
+    width: 100%;
+}
+.menu li a:hover{
+    color: black;
+}
+h1{   
+    align-items: center;
+    width: 100px;
+    margin: 100%;
+}
+  
